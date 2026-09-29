@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Store Manager · Orders</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../assets/waypoint-ds.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap">
+<style>
+  body{margin:0;}
+
+</style>
+</helmet>
+<div class="store w">
+  <header class="store-top">
+    <a href="Main.dc.html" class="brandmark"><span class="sq"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="2.7" stroke="var(--ink)" stroke-width="2"/><circle cx="18" cy="18" r="2.7" fill="var(--ink)"/><path d="M8.3 8.3L15.7 15.7" stroke="var(--ink)" stroke-width="2" stroke-dasharray="2.2 2.4"/></svg></span>Waypoint</a>
+    <div class="row g8" style="padding-left:18px;border-left:1px solid var(--line);height:30px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l1.5-4.5h13L20 9M4 9v11h16V9M4 9h16M9.5 20v-5.5h5V20"/></svg><div class="col" style="line-height:1.2;"><span class="b">OUT014 Dehiwala</span><span class="xs t2">Waypoint Fresh</span></div>
+    </div>
+    <nav class="tabs" aria-label="Store"><a href="SM1-Dashboard.dc.html" class="">Today</a><a href="SM2-PlaceOrder.dc.html" class="">Place order</a><a href="SM3-OrderQueue.dc.html" class="on">Orders</a><a href="SM5-DeferralNotice.dc.html" class="">Deferrals</a><a href="SM6-ConfirmReceipt.dc.html" class="">Receiving<span class=count>1</span></a></nav>
+    <div class="end row g16">
+      <span class="clock">Tue 29 Sep · 08:10</span>
+      <div class="row g8"><div class="avatar" style="background:var(--yellow);color:var(--ink);">NF</div><div class="col" style="line-height:1.2;"><span class="b sm">Nadeeka Fernando</span><span class="xs t2">Store manager</span></div></div>
+    </div>
+  </header>
+  <main class="store-page">
+<div class="pagehead rise"><div class="col g6"><span class="label">OUT014 Dehiwala · last 14 days</span><h1 class="h-page">Orders</h1></div><div class="end row g8"><div class="row" style="border:1px solid var(--line-2);border-radius:var(--r-md);padding:3px;gap:2px;background:var(--card);"><button class="btn" style="height:30px;padding:0 12px;background:var(--ink);color:var(--paper);">All</button><button class="btn btn-quiet" style="height:30px;">Open 2</button><button class="btn btn-quiet" style="height:30px;">Had a problem 2</button></div></div></div>
+    <section class="panel rise-2" style="overflow:hidden;">
+      <table class="tbl"><thead><tr><th>Order</th><th>Delivery day</th><th class="r">Lines</th><th>Status</th><th>Arrived</th><th>Note</th><th></th></tr></thead><tbody><tr class=""><td class="mono b"><a href="SM4-OrderDetail.dc.html">ORD42017</a></td><td>Wed 30 Sep</td><td class="r mono">8</td><td><span class="tag tag-line"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>Placed 08:14</span></td><td class="mono">05:30–08:00</td><td class="sm t2">Chilled slot held</td><td class="r t3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></td></tr><tr class="hl"><td class="mono b"><a href="SM4-OrderDetail.dc.html">ORD41822</a></td><td>Tue 29 Sep</td><td class="r mono">5</td><td><span class="tag tag-attn"><i></i>Check what arrived</span></td><td class="mono">06:02</td><td class="sm t2"></td><td class="r t3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></td></tr><tr class=""><td class="mono b"><a href="SM4-OrderDetail.dc.html">ORD41519</a></td><td>Mon 28 Sep</td><td class="r mono">6</td><td><span class="tag tag-ok"><i></i>Delivered</span></td><td class="mono">06:10</td><td class="sm t2">Carried from Fri 25 Sep</td><td class="r t3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></td></tr><tr class=""><td class="mono b"><a href="SM4-OrderDetail.dc.html">ORD41390</a></td><td>Thu 24 Sep</td><td class="r mono">7</td><td><span class="tag tag-ok"><i></i>Delivered</span></td><td class="mono">06:40</td><td class="sm t2"></td><td class="r t3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></td></tr><tr class=""><td class="mono b"><a href="SM4-OrderDetail.dc.html">ORD41208</a></td><td>Mon 21 Sep</td><td class="r mono">6</td><td><span class="tag tag-muted">Resolved</span></td><td class="mono">05:55</td><td class="sm t2">1 carton short, credited</td><td class="r t3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></td></tr><tr class=""><td class="mono b"><a href="SM4-OrderDetail.dc.html">ORD41102</a></td><td>Sat 19 Sep</td><td class="r mono">5</td><td><span class="tag tag-ok"><i></i>Delivered</span></td><td class="mono">06:20</td><td class="sm t2"></td><td class="r t3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></td></tr><tr class=""><td class="mono b"><a href="SM4-OrderDetail.dc.html">ORD41011</a></td><td>Thu 17 Sep</td><td class="r mono">6</td><td><span class="tag tag-stop"><i></i>Deferred</span></td><td class="mono">–</td><td class="sm t2">Delivered Fri 18, bay closed at 08:00</td><td class="r t3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></td></tr></tbody></table>
+    </section>
+    <div class="row g10 sm t2 rise-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>Waypoint won't defer the same outlet twice in a row. When you wait once, your next order is protected.</div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

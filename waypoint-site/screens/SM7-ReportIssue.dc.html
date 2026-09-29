@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Store Manager · Report a problem</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../assets/waypoint-ds.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap">
+<style>
+  body{margin:0;}
+
+</style>
+</helmet>
+<div class="store w">
+  <header class="store-top">
+    <a href="Main.dc.html" class="brandmark"><span class="sq"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="2.7" stroke="var(--ink)" stroke-width="2"/><circle cx="18" cy="18" r="2.7" fill="var(--ink)"/><path d="M8.3 8.3L15.7 15.7" stroke="var(--ink)" stroke-width="2" stroke-dasharray="2.2 2.4"/></svg></span>Waypoint</a>
+    <div class="row g8" style="padding-left:18px;border-left:1px solid var(--line);height:30px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l1.5-4.5h13L20 9M4 9v11h16V9M4 9h16M9.5 20v-5.5h5V20"/></svg><div class="col" style="line-height:1.2;"><span class="b">OUT014 Dehiwala</span><span class="xs t2">Waypoint Fresh</span></div>
+    </div>
+    <nav class="tabs" aria-label="Store"><a href="SM1-Dashboard.dc.html" class="">Today</a><a href="SM2-PlaceOrder.dc.html" class="">Place order</a><a href="SM3-OrderQueue.dc.html" class="">Orders</a><a href="SM5-DeferralNotice.dc.html" class="">Deferrals</a><a href="SM6-ConfirmReceipt.dc.html" class="on">Receiving<span class=count>1</span></a></nav>
+    <div class="end row g16">
+      <span class="clock">Tue 29 Sep · 08:10</span>
+      <div class="row g8"><div class="avatar" style="background:var(--yellow);color:var(--ink);">NF</div><div class="col" style="line-height:1.2;"><span class="b sm">Nadeeka Fernando</span><span class="xs t2">Store manager</span></div></div>
+    </div>
+  </header>
+  <main class="store-page">
+<div class="pagehead rise"><div class="col g6"><span class="label">ORD41822 · Chicken 1 kg, carton of 10</span><h1 class="h-page">Report a problem</h1></div><div class="end row g8"></div></div>
+    <div style="display:grid;grid-template-columns:1fr 420px;gap:16px;flex:1;min-height:0;" class="rise-2">
+      <section class="panel" style="padding:22px 24px;gap:18px;">
+        <div class="field"><label>What happened</label><div class="row g8"><button class="btn" style="height:44px;background:var(--ink);color:var(--paper);">Short</button><button class="btn" style="height:44px;border:1px solid var(--line-2);background:var(--card);">Damaged</button><button class="btn" style="height:44px;border:1px solid var(--line-2);background:var(--card);">Wrong item</button><button class="btn" style="height:44px;border:1px solid var(--line-2);background:var(--card);">Past its date</button></div></div>
+        <div class="row g16">
+          <div class="field"><label>How many missing</label><div class="stepper" style="height:44px;"><button aria-label="Less" style="height:42px;">−</button><span>1</span><button aria-label="More" style="height:42px;">+</button></div></div>
+          <div class="field fill"><label>Photo</label><button class="row g10 input" style="border-style:dashed;height:44px;color:var(--text-2);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.8-2.5h6.4L17 8h3v11H4z"/><circle cx="12" cy="13.2" r="3.3"/></svg>Add a photo of the cold room shelf · optional</button></div>
+        </div>
+        <div class="field"><label for="note">Note for dispatch</label><div class="input area" id="note">Counted with Dilini at 06:40. Three cartons on the shelf, the fourth isn't in the delivery crate either.</div></div>
+        <div class="field"><label>How should we fix it</label>
+          <div class="col g8">
+            <label class="row g10" style="height:52px;padding:0 14px;border:2px solid var(--ink);border-radius:var(--r-md);"><span style="width:16px;height:16px;border-radius:50%;border:5px solid var(--ink);"></span><span class="b">Add 1 carton to Wednesday's order, no charge</span></label>
+            <label class="row g10" style="height:52px;padding:0 14px;border:1px solid var(--line-2);border-radius:var(--r-md);"><span style="width:16px;height:16px;border-radius:50%;border:1.5px solid var(--line-2);"></span><span>Credit my account</span></label></div></div>
+        <div class="row g8" style="margin-top:auto;"><a href="SM1-Dashboard.dc.html" class="btn btn-ink btn-lg">Send report</a><a href="SM6-ConfirmReceipt.dc.html" class="btn btn-quiet btn-lg">Back</a></div>
+      </section>
+      <aside class="panel" style="padding:20px 22px;gap:12px;align-self:flex-start;">
+        <span class="h-sec">What Waypoint already knows</span>
+        <span class="sm t2" style="line-height:1.5;">The gap is between the truck and your shelf, not at the dock. Dispatch will check with Sampath and reply by 12:00.</span>
+        <div class="col divide"><div class="row g12" style="min-height:46px;align-items:flex-start;padding-top:6px;"><span class="mono xs t2" style="width:44px;">04:44</span><div class="col fill" style="line-height:1.35;"><span class="sm b">Dock scan, Bay 01</span><span class="xs t2">4 cartons of chicken scanned onto VEH014</span></div><span style="color:var(--green);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div><div class="row g12" style="min-height:46px;align-items:flex-start;padding-top:6px;"><span class="mono xs t2" style="width:44px;">06:02</span><div class="col fill" style="line-height:1.35;"><span class="sm b">Driver handover</span><span class="xs t2">Sampath recorded 4 cartons handed over</span></div><span style="color:var(--green);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div><div class="row g12" style="min-height:46px;align-items:flex-start;padding-top:6px;"><span class="mono xs t2" style="width:44px;">06:40</span><div class="col fill" style="line-height:1.35;"><span class="sm b">Your count</span><span class="xs t2">3 cartons in your cold room</span></div><span style="color:var(--red);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 21V4M5.5 4.5h11l-2.2 4 2.2 4h-11"/></svg></span></div></div>
+      </aside>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

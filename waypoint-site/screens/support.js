@@ -1,0 +1,1 @@
+/* Stub. On claude.ai this file is provided by the Design canvas runtime. The screens are plain HTML and CSS and do not need it. */

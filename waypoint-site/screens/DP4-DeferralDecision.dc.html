@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dispatcher · Deferral decision</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../assets/waypoint-ds.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap">
+<style>
+  body{margin:0;}
+
+</style>
+</helmet>
+<div class="shell w">
+  <nav class="rail" aria-label="Dispatcher">
+    <a href="Main.dc.html" class="rail-mark" aria-label="Waypoint home" style="width:40px;padding:0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="2.7" stroke="var(--ink)" stroke-width="2"/><circle cx="18" cy="18" r="2.7" fill="var(--ink)"/><path d="M8.3 8.3L15.7 15.7" stroke="var(--ink)" stroke-width="2" stroke-dasharray="2.2 2.4"/></svg></a>
+    <a href="DP1-Dashboard.dc.html" class="" aria-label="Overview"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><rect x="13.5" y="13.5" width="7" height="7" rx="1"/></svg><span>Overview</span></a><a href="DP2-OrderQueue.dc.html" class="" aria-label="Orders"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor" stroke="none"/></svg><span>Orders</span></a><a href="DP3-PlanAllocate.dc.html" class="" aria-label="Plan"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.2"/><circle cx="18" cy="18.5" r="2.2"/><path d="M8.2 5.5H15a3.5 3.5 0 010 7H9a3.5 3.5 0 000 7h6.8"/></svg><span>Plan</span></a><a href="DP4-DeferralDecision.dc.html" class="on" aria-label="Defer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="7.5"/><path d="M12 9.5V13l2.5 1.8M9.5 2.5h5"/></svg><span>Defer</span></a><a href="DP5-LiveTracking.dc.html" class="" aria-label="Live"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.8-6.5-10.5a6.5 6.5 0 0113 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></svg><span>Live</span></a><a href="DP6-DeferredLog.dc.html" class="" aria-label="Log"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 4.5h10a3 3 0 013 3v12h-10a3 3 0 01-3-3z"/><path d="M5.5 16.5a3 3 0 013-3h10M9 8.5h6"/></svg><span>Log</span></a>
+    <a href="DP1-Dashboard.dc.html" class="rail-end" aria-label="Switch depot"><span class="mono" style="font-size:11px;color:var(--dock-text);">PLG</span><span>Depot</span></a>
+  </nav>
+  <div class="main">
+    <header class="top">
+      <div class="crumb"><span class="t2">Peliyagoda depot</span><span class="sep">/</span><span class="b">Chilled capacity, Wed</span></div>
+      <div class="end row g16">
+        <span class="clock">Tue 29 Sep · 14:36</span>
+        <span class="cutoff"><i class="sq"></i>Wed orders close 16:00 · 1h 40m</span>
+        <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.3-4.3"/></svg><span>Vehicle, outlet or order</span><span class="kbd">/</span></div>
+        <button class="row" aria-label="Notifications" style="color:var(--text-2);position:relative;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 10a5.5 5.5 0 0111 0c0 4 1.5 5.5 1.5 5.5h-14S6.5 14 6.5 10z"/><path d="M10 19a2 2 0 004 0"/></svg><span style="position:absolute;top:-1px;right:-1px;width:7px;height:7px;background:var(--red);border-radius:50%;"></span></button>
+        <div class="row g8"><div class="avatar">KP</div><div class="col" style="line-height:1.2;"><span class="b sm">Kavindi Perera</span><span class="xs t2">Dispatch lead</span></div></div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="pagehead rise">
+        <div class="col g6"><span class="label">Wednesday 30 September · Colombo chilled</span><h1 class="h-page">3 chilled orders have to wait a day</h1>
+          <p class="lead">16 reefer slots for 19 chilled orders while VEH031 is in the workshop. Waypoint suggests who waits by fairness, not by who ordered last. You make the call.</p></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 400px;gap:16px;flex:1;min-height:0;" class="rise-2">
+        <div class="col g16" style="min-height:0;">
+          <section class="panel" style="padding:14px 16px;gap:10px;flex-direction:row;">
+            <div class="col g4" style="width:180px;flex-shrink:0;"><span class="h-sec">How the suggestion works</span><span class="xs t2">Same rule every day, written down</span></div>
+            <div class="col g8 fill"><div class="row g10" style="align-items:flex-start;"><span class="pin" style="width:20px;height:20px;font-size:10.5px;">1</span><span class="sm" style="line-height:1.45;">Outlets deferred on either of the last two runs are <b>protected</b>. They can't wait again.</span></div><div class="row g10" style="align-items:flex-start;"><span class="pin" style="width:20px;height:20px;font-size:10.5px;">2</span><span class="sm" style="line-height:1.45;">Next, the <b>longest gap</b> since the last chilled delivery is served first.</span></div><div class="row g10" style="align-items:flex-start;"><span class="pin" style="width:20px;height:20px;font-size:10.5px;">3</span><span class="sm" style="line-height:1.45;">On a tie, the <b>smaller order</b> waits, so fewer goods sit in the cold room.</span></div></div>
+          </section>
+          <section class="panel" style="overflow:hidden;">
+            <table class="tbl">
+              <thead><tr><th>Outlet</th><th>Last chilled delivery</th><th>Deferred, last 14 days</th><th class="r">kg</th><th>Suggestion</th><th>Your decision</th></tr></thead>
+              <tbody><tr class=""><td class="b">OUT045 Negombo</td><td><span class="mono">Mon 28</span> <span class="xs t2">deferred today</span></td><td><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span> <span class="xs t2 mono">1</span></td><td class="r mono">312</td><td><span class="tag tag-line"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>Protected</span></td><td><span class="row g6 sm t2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>Serve</span></td></tr><tr class=""><td class="b">OUT058 Nugegoda</td><td><span class="mono">Mon 28</span> <span class="xs t2">deferred today</span></td><td><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span> <span class="xs t2 mono">1</span></td><td class="r mono">270</td><td><span class="tag tag-line"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>Protected</span></td><td><span class="row g6 sm t2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>Serve</span></td></tr><tr class=""><td class="b">OUT014 Dehiwala</td><td><span class="mono">Today 06:02</span> <span class="xs t2"></span></td><td><span class="dots"><i class="on"></i><i class="on"></i><i class=""></i></span> <span class="xs t2 mono">2</span></td><td class="r mono">486</td><td><span class="tag tag-line"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>Protected</span></td><td><span class="row g6 sm t2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>Serve</span></td></tr><tr class=""><td class="b">OUT031 Kelaniya</td><td><span class="mono">Sat 26</span> <span class="xs t2">3 days ago</span></td><td><span class="dots"><i class=""></i><i class=""></i><i class=""></i></span> <span class="xs t2 mono">0</span></td><td class="r mono">240</td><td><span class="t2 sm">Serve, longest gap</span></td><td><div class="row" style="border:1px solid var(--line-2);border-radius:var(--r-md);padding:2px;gap:2px;background:var(--card);"><button class="btn" style="height:26px;padding:0 10px;font-size:12px;background:var(--ink);color:var(--paper);">Serve</button><button class="btn" style="height:26px;padding:0 10px;font-size:12px;">Wait</button></div></td></tr><tr class=""><td class="b">OUT011 Wellawatte</td><td><span class="mono">Today 06:15</span> <span class="xs t2"></span></td><td><span class="dots"><i class=""></i><i class=""></i><i class=""></i></span> <span class="xs t2 mono">0</span></td><td class="r mono">220</td><td><span class="t2 sm">Serve</span></td><td><div class="row" style="border:1px solid var(--line-2);border-radius:var(--r-md);padding:2px;gap:2px;background:var(--card);"><button class="btn" style="height:26px;padding:0 10px;font-size:12px;background:var(--ink);color:var(--paper);">Serve</button><button class="btn" style="height:26px;padding:0 10px;font-size:12px;">Wait</button></div></td></tr><tr class="hl"><td class="b">OUT067 Wattala</td><td><span class="mono">Today 07:10</span> <span class="xs t2"></span></td><td><span class="dots"><i class=""></i><i class=""></i><i class=""></i></span> <span class="xs t2 mono">0</span></td><td class="r mono">198</td><td><span class="b sm">Wait, served today</span></td><td><div class="row" style="border:1px solid var(--line-2);border-radius:var(--r-md);padding:2px;gap:2px;background:var(--card);"><button class="btn" style="height:26px;padding:0 10px;font-size:12px;">Serve</button><button class="btn" style="height:26px;padding:0 10px;font-size:12px;background:var(--yellow);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);">Wait</button></div></td></tr><tr class="hl"><td class="b">OUT022 Borella</td><td><span class="mono">Today 06:40</span> <span class="xs t2"></span></td><td><span class="dots"><i class=""></i><i class=""></i><i class=""></i></span> <span class="xs t2 mono">0</span></td><td class="r mono">224</td><td><span class="b sm">Wait, served today</span></td><td><div class="row" style="border:1px solid var(--line-2);border-radius:var(--r-md);padding:2px;gap:2px;background:var(--card);"><button class="btn" style="height:26px;padding:0 10px;font-size:12px;">Serve</button><button class="btn" style="height:26px;padding:0 10px;font-size:12px;background:var(--yellow);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);">Wait</button></div></td></tr><tr class="hl"><td class="b">OUT036 Kirulapone</td><td><span class="mono">Today 07:25</span> <span class="xs t2"></span></td><td><span class="dots"><i class=""></i><i class=""></i><i class=""></i></span> <span class="xs t2 mono">0</span></td><td class="r mono">186</td><td><span class="b sm">Wait, served today</span></td><td><div class="row" style="border:1px solid var(--line-2);border-radius:var(--r-md);padding:2px;gap:2px;background:var(--card);"><button class="btn" style="height:26px;padding:0 10px;font-size:12px;">Serve</button><button class="btn" style="height:26px;padding:0 10px;font-size:12px;background:var(--yellow);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);">Wait</button></div></td></tr></tbody>
+            </table>
+            <div class="xs t2" style="padding:10px 14px;border-top:1px solid var(--line);">+ 8 more chilled orders, all served. <a href="DP6-DeferredLog.dc.html" style="text-decoration:underline;">See the full deferral history</a></div>
+          </section>
+        </div>
+        <aside class="panel">
+          <div class="panel-h"><h2 class="h-sec">If you confirm</h2></div>
+          <div class="panel-b col g16" style="flex:1;">
+            <div class="col g8">
+              <div class="row g10"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 10a5.5 5.5 0 0111 0c0 4 1.5 5.5 1.5 5.5h-14S6.5 14 6.5 10z"/><path d="M10 19a2 2 0 004 0"/></svg><span class="sm"><b>3 store managers are told at once</b>, with the reason below, before tomorrow's shift is rostered.</span></div>
+              <div class="row g10"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg><span class="sm"><b>Their Thursday orders are protected</b>, so none of them can wait twice in a row.</span></div>
+              <div class="row g10"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9M9.5 4.5L12 6.5l2.5-2M9.5 19.5L12 17.5l2.5 2"/></svg><span class="sm"><b>Reefers on Wednesday: 16 of 16 slots used.</b> Nothing is overloaded.</span></div>
+            </div>
+            <div class="field">
+              <label for="reason">Reason the store managers will read</label>
+              <div class="input area" id="reason" role="textbox" style="font-size:12.5px;">One of our refrigerated trucks is in for a brake service on Wednesday. You were served today, so your order moves to Thursday 1 October in the same window, and it won't be moved again.</div>
+              <span class="xs t2">Plain language, no internal codes. Stored in the deferral log.</span>
+            </div>
+            <div class="col g8" style="margin-top:auto;">
+              <a href="DP6-DeferredLog.dc.html" class="btn btn-ink btn-lg btn-block">Confirm 3 deferrals</a>
+              <a href="DP3-PlanAllocate.dc.html" class="btn btn-quiet btn-block">Back to the plan</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

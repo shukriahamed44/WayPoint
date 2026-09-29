@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Store Manager · Check what arrived</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../assets/waypoint-ds.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap">
+<style>
+  body{margin:0;}
+
+</style>
+</helmet>
+<div class="store w">
+  <header class="store-top">
+    <a href="Main.dc.html" class="brandmark"><span class="sq"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="2.7" stroke="var(--ink)" stroke-width="2"/><circle cx="18" cy="18" r="2.7" fill="var(--ink)"/><path d="M8.3 8.3L15.7 15.7" stroke="var(--ink)" stroke-width="2" stroke-dasharray="2.2 2.4"/></svg></span>Waypoint</a>
+    <div class="row g8" style="padding-left:18px;border-left:1px solid var(--line);height:30px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l1.5-4.5h13L20 9M4 9v11h16V9M4 9h16M9.5 20v-5.5h5V20"/></svg><div class="col" style="line-height:1.2;"><span class="b">OUT014 Dehiwala</span><span class="xs t2">Waypoint Fresh</span></div>
+    </div>
+    <nav class="tabs" aria-label="Store"><a href="SM1-Dashboard.dc.html" class="">Today</a><a href="SM2-PlaceOrder.dc.html" class="">Place order</a><a href="SM3-OrderQueue.dc.html" class="">Orders</a><a href="SM5-DeferralNotice.dc.html" class="">Deferrals</a><a href="SM6-ConfirmReceipt.dc.html" class="on">Receiving<span class=count>1</span></a></nav>
+    <div class="end row g16">
+      <span class="clock">Tue 29 Sep · 08:10</span>
+      <div class="row g8"><div class="avatar" style="background:var(--yellow);color:var(--ink);">NF</div><div class="col" style="line-height:1.2;"><span class="b sm">Nadeeka Fernando</span><span class="xs t2">Store manager</span></div></div>
+    </div>
+  </header>
+  <main class="store-page">
+<div class="pagehead rise"><div class="col g6"><span class="label">ORD41822 · arrived 06:02 · VEH014</span><h1 class="h-page">Check what arrived</h1><p class="lead">Count each line against what you ordered. Anything short or damaged is reported from here, while the driver's record is fresh.</p></div><div class="end row g8"></div></div>
+    <div style="display:grid;grid-template-columns:1fr 380px;gap:16px;flex:1;min-height:0;" class="rise-2">
+      <section class="panel" style="overflow:hidden;align-self:flex-start;">
+        <table class="tbl"><thead><tr><th>Item</th><th>Pack</th><th class="r">Ordered</th><th>Received</th><th></th></tr></thead><tbody><tr class=""><td class="b">Fresh milk 1 L</td><td class="sm t2">crate of 12</td><td class="r mono">8</td><td><div class="stepper" style=""><button aria-label="Less">−</button><span>8</span><button aria-label="More">+</button></div></td><td><span class="tag tag-ok"><i></i>Matches</span></td></tr><tr class=""><td class="b">Set yoghurt 80 g</td><td class="sm t2">tray of 24</td><td class="r mono">6</td><td><div class="stepper" style=""><button aria-label="Less">−</button><span>6</span><button aria-label="More">+</button></div></td><td><span class="tag tag-ok"><i></i>Matches</span></td></tr><tr class="hl"><td class="b">Chicken 1 kg</td><td class="sm t2">carton of 10</td><td class="r mono">4</td><td><div class="stepper" style="border-color:var(--red);color:var(--red-text);"><button aria-label="Less">−</button><span>3</span><button aria-label="More">+</button></div></td><td><span class="tag tag-stop"><i></i>1 short</span></td></tr><tr class=""><td class="b">Carrots 1 kg</td><td class="sm t2">box of 10</td><td class="r mono">5</td><td><div class="stepper" style=""><button aria-label="Less">−</button><span>5</span><button aria-label="More">+</button></div></td><td><span class="tag tag-ok"><i></i>Matches</span></td></tr><tr class=""><td class="b">Rice, samba 5 kg</td><td class="sm t2">bag</td><td class="r mono">3</td><td><div class="stepper" style=""><button aria-label="Less">−</button><span>3</span><button aria-label="More">+</button></div></td><td><span class="tag tag-ok"><i></i>Matches</span></td></tr></tbody></table>
+        <div class="row g8 sm" style="padding:12px 14px;border-top:1px solid var(--line);"><span class="t2">4 of 5 lines match.</span><span class="b">1 carton of chicken missing.</span></div>
+      </section>
+      <aside class="panel" style="padding:20px 22px;gap:14px;">
+        <div class="field"><label for="rcv">Received by</label><div class="input" id="rcv">Dilini Wijesinghe, counter</div></div>
+        <div class="field"><label>Signature</label><div class="sunk" style="padding:4px 10px;"><svg viewBox="0 0 300 90" width="100%" height="84" fill="none" aria-label="Signature"><path d="M22 58c10-22 22-36 30-30 6 5-8 30 0 30 8 0 12-20 22-20s0 18 10 18 14-14 24-14 4 12 14 12c14 0 20-18 34-16 10 1 8 12 18 12 12 0 22-10 34-10" stroke="#1B1A17" stroke-width="2.4" stroke-linecap="round"/><path d="M14 76h272" stroke="#C9C4B8" stroke-dasharray="3 5"/></svg></div></div>
+        <span class="xs t2" style="line-height:1.5;">Signing confirms the counts above, including the missing carton. It doesn't accept the shortfall.</span>
+        <div class="col g8" style="margin-top:auto;"><a href="SM7-ReportIssue.dc.html" class="btn btn-ink btn-lg btn-block">Sign and report 1 short</a><a href="SM1-Dashboard.dc.html" class="btn btn-quiet btn-block">Save and finish later</a></div>
+      </aside>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Driver · Trip summary</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../assets/waypoint-ds.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap">
+<style>
+  body{margin:0;}
+
+</style>
+</helmet>
+<div class="phone w">
+  <div class="island"></div>
+  <div class="phone-screen" style="background:var(--paper);">
+<header class="p-head"><span class="label">Tue 29 Sep · VEH022 · 13:42</span><h1 class="p-title">Run complete</h1></header>
+    <div class="p-body">
+      <div class="row" style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+        <div class="p-card col g2" style="padding:10px 12px;"><span class="h-display" style="font-size:30px;">5/5</span><span class="xs t2">stops</span></div><div class="p-card col g2" style="padding:10px 12px;"><span class="h-display" style="font-size:30px;">142</span><span class="xs t2">km</span></div><div class="p-card col g2" style="padding:10px 12px;"><span class="h-display" style="font-size:30px;">7:12</span><span class="xs t2">hours</span></div>
+      </div>
+      <div class="p-card divide"><div class="row" style="height:38px;padding:0 14px;"><span class="label">What happened</span><span class="end tag tag-ok"><i></i>All sent</span></div><div class="row g10" style="min-height:52px;padding:8px 14px;align-items:flex-start;"><span class="mono xs t2" style="width:38px;padding-top:2px;">07:52</span>
+        <div class="col fill" style="line-height:1.35;"><span class="sm b">Nittambuwa closed</span><span class="xs t2">Delivered on the way back at 12:20</span></div></div><div class="row g10" style="min-height:52px;padding:8px 14px;align-items:flex-start;"><span class="mono xs t2" style="width:38px;padding-top:2px;">08:44</span>
+        <div class="col fill" style="line-height:1.35;"><span class="sm b">Kegalle 4 detergent short</span><span class="xs t2">Known from the dock. Arrives Wed</span></div></div><div class="row g10" style="min-height:52px;padding:8px 14px;align-items:flex-start;"><span class="mono xs t2" style="width:38px;padding-top:2px;">09:40</span>
+        <div class="col fill" style="line-height:1.35;"><span class="sm b">No signal for 51 min</span><span class="xs t2">2 deliveries saved, all sent 10:31</span></div></div><div class="row g10" style="min-height:52px;padding:8px 14px;align-items:flex-start;"><span class="mono xs t2" style="width:38px;padding-top:2px;">10:34</span>
+        <div class="col fill" style="line-height:1.35;"><span class="sm b">Kandy City conflict</span><span class="xs t2">Your delivery stood. Dispatch updated</span></div></div></div>
+    </div>
+    <div class="p-foot"><span class="xs t2" style="text-align:center;">Hand the keys back at Bay 03</span><a href="Main.dc.html" class="btn btn-ink btn-lg btn-block">End shift</a></div>
+    <nav class="p-nav" aria-label="Driver"><a href="DR1-TodaysRoute.dc.html" class=""><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.2"/><circle cx="18" cy="18.5" r="2.2"/><path d="M8.2 5.5H15a3.5 3.5 0 010 7H9a3.5 3.5 0 000 7h6.8"/></svg>Route</a><a href="DR5-OfflineMode.dc.html" class=""><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12a7.5 7.5 0 01-12.9 5.2M4.5 12a7.5 7.5 0 0112.9-5.2"/><path d="M17.8 3.5v3.3h-3.3M6.2 20.5v-3.3h3.3"/></svg>Sync</a><a href="DR7-TripSummary.dc.html" class="on"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 4.5h10a3 3 0 013 3v12h-10a3 3 0 01-3-3z"/><path d="M5.5 16.5a3 3 0 013-3h10M9 8.5h6"/></svg>Summary</a></nav>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

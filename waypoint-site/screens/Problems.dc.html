@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Three problems</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../assets/waypoint-ds.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap">
+<style>
+  body{margin:0;}
+
+</style>
+</helmet>
+<div class="w" style="width:1440px;height:900px;background:var(--paper);padding:40px 48px 34px;display:flex;flex-direction:column;overflow:hidden;">
+  <div class="row" style="align-items:flex-end;">
+    <div class="col g6"><span class="label">Deliverable · problem framing</span><h1 class="h-display" style="font-size:56px;">The three problems we designed around</h1></div>
+    <a href="Main.dc.html" class="end btn btn-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Cover</a></div>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;padding-top:22px;border-top:2px solid var(--ink);flex:1;min-height:0;"><section class="col" style="padding:0 26px;padding-left:0;min-width:0;">
+      <div class="row g12" style="align-items:flex-end;"><span class="stencil" style="font-size:72px;">01</span></div>
+      <h2 class="h-display" style="font-size:36px;margin-top:10px;">Planning is fragmented</h2>
+      <p style="margin:12px 0 0;font-size:15px;line-height:1.55;color:var(--ink);">Orders, vehicle capacity, constraints, and store requirements live across spreadsheets, calls, and dispatcher knowledge.</p>
+      <div class="col g6" style="margin-top:20px;padding:14px 16px;background:var(--red-soft);border-radius:8px;">
+        <span class="label" style="color:var(--red-text);">What it looks like today</span>
+        <span style="font-size:13.5px;line-height:1.5;color:var(--ink-2);">Kavindi knows which outlets can't take a truck after eight and which mall shuts its dock at one. The spreadsheet doesn't. It also doesn't know VEH031 is in the workshop.</span></div>
+      <div class="col g6" style="margin-top:12px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:8px;">
+        <span class="label">How Waypoint answers it</span>
+        <span style="font-size:13.5px;line-height:1.5;color:var(--ink);">One plan holds orders, capacity, cold chain and dock windows. When trucks run short, a written fairness rule suggests who waits and the dispatcher makes the call.</span>
+        <div class="row g6" style="margin-top:6px;flex-wrap:wrap;"><a href="DP2-OrderQueue.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">DP2</a><a href="DP3-PlanAllocate.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">DP3</a><a href="DP4-DeferralDecision.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">DP4</a><a href="DP6-DeferredLog.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">DP6</a></div></div>
+    </section><section class="col" style="padding:0 26px;border-left:1px solid var(--line-2);min-width:0;">
+      <div class="row g12" style="align-items:flex-end;"><span class="stencil" style="font-size:72px;">02</span></div>
+      <h2 class="h-display" style="font-size:36px;margin-top:10px;">Decisions don't propagate</h2>
+      <p style="margin:12px 0 0;font-size:15px;line-height:1.55;color:var(--ink);">When a load changes, the driver, store, loader, and dispatcher may not see the same operational state.</p>
+      <div class="col g6" style="margin-top:20px;padding:14px 16px;background:var(--red-soft);border-radius:8px;">
+        <span class="label" style="color:var(--red-text);">What it looks like today</span>
+        <span style="font-size:13.5px;line-height:1.5;color:var(--ink-2);">Dispatch changes the stop order at 04:10. Ruwan finds out when the driver argues with him at the truck, holding a printout that is already wrong.</span></div>
+      <div class="col g6" style="margin-top:12px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:8px;">
+        <span class="label">How Waypoint answers it</span>
+        <span style="font-size:13.5px;line-height:1.5;color:var(--ink);">Every change is an event that reaches every role: same fact, same number, same words. A printout that has gone stale is marked, and every deferral carries its reason.</span>
+        <div class="row g6" style="margin-top:6px;flex-wrap:wrap;"><a href="LD1-DockHome.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">LD1</a><a href="DR3-ProofOfDelivery.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">DR3</a><a href="DP1-Dashboard.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">DP1</a><a href="SM5-DeferralNotice.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">SM5</a></div></div>
+    </section><section class="col" style="padding:0 26px;border-left:1px solid var(--line-2);min-width:0;">
+      <div class="row g12" style="align-items:flex-end;"><span class="stencil" style="font-size:72px;">03</span></div>
+      <h2 class="h-display" style="font-size:36px;margin-top:10px;">Problems are discovered too late</h2>
+      <p style="margin:12px 0 0;font-size:15px;line-height:1.55;color:var(--ink);">Shortages, connectivity failures, delivery issues, and deferrals often surface at the point of delivery instead of where they can still be managed.</p>
+      <div class="col g6" style="margin-top:20px;padding:14px 16px;background:var(--red-soft);border-radius:8px;">
+        <span class="label" style="color:var(--red-text);">What it looks like today</span>
+        <span style="font-size:13.5px;line-height:1.5;color:var(--ink-2);">Four cartons missing at the dock at 05:38 become an argument at the Kegalle store at 08:44, between two people who never had the goods.</span></div>
+      <div class="col g6" style="margin-top:12px;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:8px;">
+        <span class="label">How Waypoint answers it</span>
+        <span style="font-size:13.5px;line-height:1.5;color:var(--ink);">Problems are caught where they can still be managed: a shortfall at the dock before the truck leaves, a delivery proved on the phone even with no signal.</span>
+        <div class="row g6" style="margin-top:6px;flex-wrap:wrap;"><a href="LD4-FlagShortfall.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">LD4</a><a href="DR5-OfflineMode.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">DR5</a><a href="DR6-SyncReconcile.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">DR6</a><a href="DP5-LiveTracking.dc.html" class="tag tag-line" style="font-family:var(--f-mono);">DP5</a></div></div>
+    </section></div>
+  <div class="row" style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line-2);align-items:center;">
+    <span class="label" style="width:150px;flex:none;">How we'll know it worked</span>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);flex:1;"><div class="col g4" style="padding:0 22px;padding-left:0;"><span class="stencil" style="font-size:40px;">0</span><span class="sm t2" style="line-height:1.35;">proofs of delivery lost</span></div><div class="col g4" style="padding:0 22px;border-left:1px solid var(--line-2);"><span class="stencil" style="font-size:40px;">100%</span><span class="sm t2" style="line-height:1.35;">of shortfalls flagged before the truck leaves</span></div><div class="col g4" style="padding:0 22px;border-left:1px solid var(--line-2);"><span class="stencil" style="font-size:40px;">0</span><span class="sm t2" style="line-height:1.35;">outlets deferred twice in a row</span></div><div class="col g4" style="padding:0 22px;border-left:1px solid var(--line-2);"><span class="stencil" style="font-size:40px;">Half</span><span class="sm t2" style="line-height:1.35;">the phone calls to dispatch per run</span></div></div></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

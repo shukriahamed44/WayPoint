@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Style guide</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../assets/waypoint-ds.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap">
+<style>
+  body{margin:0;}
+
+</style>
+</helmet>
+<div class="w" style="width:1440px;height:900px;background:var(--paper);padding:40px 48px 36px;display:flex;flex-direction:column;gap:24px;overflow:hidden;">
+  <div class="row" style="align-items:flex-end;">
+    <div class="col g6"><span class="label">Deliverable · style guide</span><h1 class="h-display" style="font-size:56px;">Dock yard: the Waypoint system</h1>
+      <p class="lead" style="max-width:78ch;">Built from what a depot is made of: printed manifests, painted bay numbers, safety-yellow floor tape and a dock lit by lamps at 04:30. Industrial, not decorative. Every colour carries exactly one meaning.</p></div>
+    <a href="Main.dc.html" class="btn btn-line end" style="align-self:flex-start;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Cover</a></div>
+  <div style="display:grid;grid-template-columns:1.25fr 1fr;gap:40px;flex:1;min-height:0;border-top:2px solid var(--ink);padding-top:22px;">
+    <div class="col g24">
+      <section class="col g12"><span class="label">Colour · one colour, one meaning</span><div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;"><div class="col g8"><span style="height:64px;border-radius:4px;background:var(--ink);"></span><span class="b sm">Ink</span><span class="mono xs t2">#1B1A17</span><span class="xs" style="line-height:1.4;color:var(--ink-2);">Structure, text, primary actions</span></div><div class="col g8"><span style="height:64px;border-radius:4px;background:var(--yellow);"></span><span class="b sm">Safety yellow</span><span class="mono xs t2">#FACC15</span><span class="xs" style="line-height:1.4;color:var(--ink-2);">Attention and the current step. Never decoration</span></div><div class="col g8"><span style="height:64px;border-radius:4px;background:var(--red);"></span><span class="b sm">Signal red</span><span class="mono xs t2">#C8341E</span><span class="xs" style="line-height:1.4;color:var(--ink-2);">Blocked, short, conflict, no signal</span></div><div class="col g8"><span style="height:64px;border-radius:4px;background:var(--green);"></span><span class="b sm">Done green</span><span class="mono xs t2">#2F7A4A</span><span class="xs" style="line-height:1.4;color:var(--ink-2);">Delivered, loaded, synced</span></div><div class="col g8"><span style="height:64px;border-radius:4px;background:var(--blue);"></span><span class="b sm">Cold blue</span><span class="mono xs t2">#2462B8</span><span class="xs" style="line-height:1.4;color:var(--ink-2);">Cold chain only: chilled and reefers</span></div></div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:4px;"><div class="col g4"><span style="height:28px;border-radius:3px;background:#F2F0EA;box-shadow:inset 0 0 0 1px var(--line-2);"></span><span class="mono xs t2">paper #F2F0EA</span></div><div class="col g4"><span style="height:28px;border-radius:3px;background:#FBFAF6;box-shadow:inset 0 0 0 1px var(--line-2);"></span><span class="mono xs t2">card #FBFAF6</span></div><div class="col g4"><span style="height:28px;border-radius:3px;background:#DCD8CE;box-shadow:inset 0 0 0 1px var(--line-2);"></span><span class="mono xs t2">line #DCD8CE</span></div><div class="col g4"><span style="height:28px;border-radius:3px;background:#56534B;box-shadow:inset 0 0 0 1px var(--line-2);"></span><span class="mono xs t2">text-2 #56534B</span></div><div class="col g4"><span style="height:28px;border-radius:3px;background:#141412;box-shadow:inset 0 0 0 1px var(--line-2);"></span><span class="mono xs t2">dock #141412</span></div></div></section>
+      <section class="col g12"><span class="label">Type</span>
+        <div class="row g20" style="align-items:flex-end;border-bottom:1px solid var(--line-2);padding-bottom:12px;">
+          <span class="h-display" style="font-size:60px;">Today's run</span><span class="stencil" style="font-size:66px;">03</span>
+          <span class="col g4 xs t2 end" style="text-align:right;">Big Shoulders 800 · headings<br>Big Shoulders Stencil · bay and stop numbers</span></div>
+        <div class="row g20" style="border-bottom:1px solid var(--line-2);padding-bottom:12px;"><span style="font-size:15px;" class="fill">Nothing waits for the network. Each delivery keeps its own timestamp, signature and photo.</span><span class="xs t2" style="width:170px;text-align:right;">IBM Plex Sans · reading and UI</span></div>
+        <div class="row g20"><span class="mono fill" style="font-size:15px;">ORD41822 · VEH014 · 05:30–08:00 · 486 kg</span><span class="xs t2" style="width:170px;text-align:right;">IBM Plex Mono · exact data only</span></div>
+      </section>
+      <section class="col g10"><span class="label">Shape and motion</span>
+        <div class="row g16" style="align-items:flex-end;">
+          <div class="col g4" style="align-items:center;"><span style="width:44px;height:44px;border:1.5px solid var(--ink);border-radius:3px;"></span><span class="mono xs t2">3px</span></div><div class="col g4" style="align-items:center;"><span style="width:44px;height:44px;border:1.5px solid var(--ink);border-radius:4px;"></span><span class="mono xs t2">4px</span></div><div class="col g4" style="align-items:center;"><span style="width:44px;height:44px;border:1.5px solid var(--ink);border-radius:6px;"></span><span class="mono xs t2">6px</span></div><div class="col g4" style="align-items:center;"><span style="width:44px;height:44px;border:1.5px solid var(--ink);border-radius:10px;"></span><span class="mono xs t2">10px</span></div>
+          <span class="sm fill" style="line-height:1.5;padding-left:8px;">Small radii: tags 3, fields 4, buttons 6, panels 10. Depth comes from hairlines, not shadows. Motion only moves and fades (140 to 500 ms, one ease-out curve) and switches off for reduced motion.</span></div>
+      </section>
+    </div>
+    <div class="col g20">
+      <section class="col g10"><span class="label">Components</span>
+        <div class="row g8 wrap"><button class="btn btn-ink">Confirm 3 deferrals</button><button class="btn btn-line">Back to the plan</button><span style="background:var(--dock);padding:6px;border-radius:8px;display:inline-flex;"><button class="btn btn-yellow">Start loading</button></span></div>
+        <div class="row g6 wrap"><span class="tag tag-ok"><i></i>Delivered</span><span class="tag tag-attn"><i></i>Next stop</span><span class="tag tag-stop"><i></i>4 short</span><span class="tag tag-cold"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9M9.5 4.5L12 6.5l2.5-2M9.5 19.5L12 17.5l2.5 2"/></svg>Chilled</span><span class="tag tag-muted">Queued</span><span class="tag tag-line"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>Protected</span></div>
+        <div class="loadbar" style="margin-top:4px;"><span class="c" style="width:40%;">OUT014 · 486</span><span class="c" style="width:22%;">OUT058 · 270</span><span style="width:18%;">OUT083 · 410</span><span class="free" style="width:20%;">free</span></div>
+      </section>
+      <section class="col g10"><span class="label">Signature details, with rules</span>
+        <div class="row g12"><span class="hazard" style="width:120px;height:14px;border-radius:2px;"></span><span class="sm fill"><b>Hazard tape</b> appears only when the workflow is degraded: a shortfall, no signal.</span></div>
+        <div class="row g12"><svg width="120" height="22"><path d="M8 11 H112" stroke="#1B1A17" stroke-width="2.4" stroke-dasharray="1 6" stroke-linecap="round"/><circle cx="8" cy="11" r="5" fill="#1B1A17"/><circle cx="112" cy="11" r="5" fill="#FBFAF6" stroke="#1B1A17" stroke-width="2"/></svg><span class="sm fill"><b>The route line</b>: solid is done, dotted is still to drive. Also the logo.</span></div>
+        <div class="row g12"><span class="perf" style="width:120px;background:radial-gradient(circle at 8px 12px,var(--paper) 5px,var(--card) 5.5px) 0 0/16px 12px repeat-x;height:12px;box-shadow:inset 0 -1px 0 var(--line);"></span><span class="sm fill"><b>Perforated edge</b> on anything that is a record: manifests, notices.</span></div>
+      </section>
+      <section class="col g10"><span class="label">Two themes, chosen by place</span>
+        <div class="row g10">
+          <div class="col g4 fill" style="padding:12px 14px;border-radius:8px;background:var(--card);border:1px solid var(--line);"><span class="b sm">Field light</span><span class="xs t2">Driver, dispatch, store. Readable in sunlight.</span></div>
+          <div class="col g4 fill" style="padding:12px 14px;border-radius:8px;background:var(--dock);color:var(--dock-text);"><span class="b sm">Dock dark</span><span class="xs" style="color:var(--dock-text-2);">Loader tablet. No glare under dock lamps at 04:30.</span></div></div>
+        <span class="xs t2">Targets: 44 px on desktop, 56 px on the phone, 64 px on the dock tablet. Text contrast 4.5:1 or better.</span>
+      </section>
+      <section class="col g8"><span class="label">Writing</span>
+        <div class="col g6 sm" style="line-height:1.45;">
+          <span>Plain words, sentence case. Buttons start with a verb: "Flag 4 short and keep loading".</span>
+          <span>Times are always 24-hour <span class="mono">HH:MM</span>. Quantities say what they count: "6 of 10 cartons".</span>
+          <span>Anything a store manager reads has no internal codes, and always says why.</span></div>
+      </section>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dispatcher · Deferral log</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../assets/waypoint-ds.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap">
+<style>
+  body{margin:0;}
+
+</style>
+</helmet>
+<div class="shell w">
+  <nav class="rail" aria-label="Dispatcher">
+    <a href="Main.dc.html" class="rail-mark" aria-label="Waypoint home" style="width:40px;padding:0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="2.7" stroke="var(--ink)" stroke-width="2"/><circle cx="18" cy="18" r="2.7" fill="var(--ink)"/><path d="M8.3 8.3L15.7 15.7" stroke="var(--ink)" stroke-width="2" stroke-dasharray="2.2 2.4"/></svg></a>
+    <a href="DP1-Dashboard.dc.html" class="" aria-label="Overview"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><rect x="13.5" y="13.5" width="7" height="7" rx="1"/></svg><span>Overview</span></a><a href="DP2-OrderQueue.dc.html" class="" aria-label="Orders"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="18" r="1.2" fill="currentColor" stroke="none"/></svg><span>Orders</span></a><a href="DP3-PlanAllocate.dc.html" class="" aria-label="Plan"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5.5" r="2.2"/><circle cx="18" cy="18.5" r="2.2"/><path d="M8.2 5.5H15a3.5 3.5 0 010 7H9a3.5 3.5 0 000 7h6.8"/></svg><span>Plan</span></a><a href="DP4-DeferralDecision.dc.html" class="" aria-label="Defer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="7.5"/><path d="M12 9.5V13l2.5 1.8M9.5 2.5h5"/></svg><span>Defer</span></a><a href="DP5-LiveTracking.dc.html" class="" aria-label="Live"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.8-6.5-10.5a6.5 6.5 0 0113 0C18.5 15.2 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></svg><span>Live</span></a><a href="DP6-DeferredLog.dc.html" class="on" aria-label="Log"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 4.5h10a3 3 0 013 3v12h-10a3 3 0 01-3-3z"/><path d="M5.5 16.5a3 3 0 013-3h10M9 8.5h6"/></svg><span>Log</span></a>
+    <a href="DP1-Dashboard.dc.html" class="rail-end" aria-label="Switch depot"><span class="mono" style="font-size:11px;color:var(--dock-text);">PLG</span><span>Depot</span></a>
+  </nav>
+  <div class="main">
+    <header class="top">
+      <div class="crumb"><span class="t2">Peliyagoda depot</span><span class="sep">/</span><span class="b">Deferral log</span></div>
+      <div class="end row g16">
+        <span class="clock">Tue 29 Sep · 14:40</span>
+        <span class="cutoff"><i class="sq"></i>Wed orders close 16:00 · 1h 40m</span>
+        <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.3-4.3"/></svg><span>Vehicle, outlet or order</span><span class="kbd">/</span></div>
+        <button class="row" aria-label="Notifications" style="color:var(--text-2);position:relative;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 10a5.5 5.5 0 0111 0c0 4 1.5 5.5 1.5 5.5h-14S6.5 14 6.5 10z"/><path d="M10 19a2 2 0 004 0"/></svg><span style="position:absolute;top:-1px;right:-1px;width:7px;height:7px;background:var(--red);border-radius:50%;"></span></button>
+        <div class="row g8"><div class="avatar">KP</div><div class="col" style="line-height:1.2;"><span class="b sm">Kavindi Perera</span><span class="xs t2">Dispatch lead</span></div></div>
+      </div>
+    </header>
+    <main class="page">
+      <div class="pagehead rise">
+        <div class="col g6"><span class="label">Every deferral, with who decided and why</span><h1 class="h-page">Deferral log</h1>
+          <p class="lead">The fairness rule on the decision screen reads from this log. No outlet waits twice in a row.</p></div>
+        <div class="end row g8"><button class="btn btn-line">Last 30 days<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><button class="btn btn-line">Export</button></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 300px;gap:16px;flex:1;min-height:0;" class="rise-2">
+        <section class="panel" style="overflow:hidden;">
+          <table class="tbl">
+            <thead><tr><th>Decided</th><th>Outlet</th><th>Brand</th><th>Reason given</th><th>By</th><th>Outcome</th><th>14 days</th><th></th></tr></thead>
+            <tbody><tr class="hl"><td class="mono sm">Tue 29 · 14:38</td><td class="b">OUT067 Wattala</td><td class="t2">Fresh</td><td style="white-space:normal;min-width:230px;" class="sm">Reefer VEH031 in workshop Wed</td><td class="t2 sm">K. Perera</td><td><span class="mono">Thu 1 Oct</span> <span class="xs t2">protected</span></td><td><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span></td><td><span class="tag tag-attn"><i></i>New</span></td></tr><tr class="hl"><td class="mono sm">Tue 29 · 14:38</td><td class="b">OUT022 Borella</td><td class="t2">Fresh</td><td style="white-space:normal;min-width:230px;" class="sm">Reefer VEH031 in workshop Wed</td><td class="t2 sm">K. Perera</td><td><span class="mono">Thu 1 Oct</span> <span class="xs t2">protected</span></td><td><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span></td><td><span class="tag tag-attn"><i></i>New</span></td></tr><tr class="hl"><td class="mono sm">Tue 29 · 14:38</td><td class="b">OUT036 Kirulapone</td><td class="t2">Fresh</td><td style="white-space:normal;min-width:230px;" class="sm">Reefer VEH031 in workshop Wed</td><td class="t2 sm">K. Perera</td><td><span class="mono">Thu 1 Oct</span> <span class="xs t2">protected</span></td><td><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span></td><td><span class="tag tag-attn"><i></i>New</span></td></tr><tr class=""><td class="mono sm">Tue 29 · 10:02</td><td class="b">OUT072 Kandy City</td><td class="t2">Style</td><td style="white-space:normal;min-width:230px;" class="sm">Vehicle unreachable, mall window at risk</td><td class="t2 sm">K. Perera</td><td><span class="tag tag-ok"><i></i>Reversed 10:34</span> <span class="xs t2">delivered 10:08</span></td><td><span class="dots"><i class=""></i><i class=""></i><i class=""></i></span></td><td></td></tr><tr class=""><td class="mono sm">Tue 29 · 04:10</td><td class="b">OUT045 Negombo</td><td class="t2">Fresh</td><td style="white-space:normal;min-width:230px;" class="sm">VEH031 failed pre-trip check</td><td class="t2 sm">K. Perera</td><td><span class="mono">Wed 30</span> <span class="xs t2">protected</span></td><td><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span></td><td></td></tr><tr class=""><td class="mono sm">Tue 29 · 04:10</td><td class="b">OUT058 Nugegoda</td><td class="t2">Fresh</td><td style="white-space:normal;min-width:230px;" class="sm">VEH031 failed pre-trip check</td><td class="t2 sm">K. Perera</td><td><span class="mono">Wed 30</span> <span class="xs t2">protected</span></td><td><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span></td><td></td></tr><tr class=""><td class="mono sm">Sun 27 · 16:05</td><td class="b">OUT090 Kurunegala</td><td class="t2">Style</td><td style="white-space:normal;min-width:230px;" class="sm">VEH045 in workshop</td><td class="t2 sm">S. Silva</td><td><span class="tag tag-ok"><i></i>Delivered Mon 28</span></td><td><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span></td><td></td></tr><tr class=""><td class="mono sm">Fri 25 · 15:40</td><td class="b">OUT014 Dehiwala</td><td class="t2">Fresh</td><td style="white-space:normal;min-width:230px;" class="sm">Colombo reefer capacity fully committed</td><td class="t2 sm">K. Perera</td><td><span class="tag tag-ok"><i></i>Delivered Mon 28</span></td><td><span class="dots"><i class="on"></i><i class="on"></i><i class=""></i></span></td><td><span class="tag tag-stop"><i></i>2nd in 14 days</span></td></tr><tr class=""><td class="mono sm">Thu 17 · 08:20</td><td class="b">OUT014 Dehiwala</td><td class="t2">Fresh</td><td style="white-space:normal;min-width:230px;" class="sm">Delivery bay closed before truck arrived (08:12)</td><td class="t2 sm">S. Silva</td><td><span class="tag tag-ok"><i></i>Delivered Fri 18</span></td><td><span class="dots"><i class="on"></i><i class=""></i><i class=""></i></span></td><td></td></tr></tbody>
+          </table>
+        </section>
+        <div class="col g16">
+          <section class="panel">
+            <div class="panel-h"><h2 class="h-sec">Waited most, last 30 days</h2></div>
+            <div class="panel-b col g12"><div class="col g4"><div class="row sm"><span>OUT014 Dehiwala</span><span class="end mono b">2</span></div><div class="meter"><span style="width:66.66666666666666%;background:var(--red);"></span></div></div><div class="col g4"><div class="row sm"><span>OUT045 Negombo</span><span class="end mono b">1</span></div><div class="meter"><span style="width:33.33333333333333%;"></span></div></div><div class="col g4"><div class="row sm"><span>OUT058 Nugegoda</span><span class="end mono b">1</span></div><div class="meter"><span style="width:33.33333333333333%;"></span></div></div><div class="col g4"><div class="row sm"><span>OUT090 Kurunegala</span><span class="end mono b">1</span></div><div class="meter"><span style="width:33.33333333333333%;"></span></div></div><div class="col g4"><div class="row sm"><span>OUT067 Wattala</span><span class="end mono b">1</span></div><div class="meter"><span style="width:33.33333333333333%;"></span></div></div></div>
+          </section>
+          <section class="panel panel-b col g8">
+            <span class="h-sec">Reversed decisions</span>
+            <span class="sm t2" style="line-height:1.5;">OUT072 Kandy City was moved while VEH022 had no signal. The driver had already delivered at 10:08. When the phone synced at 10:31 the conflict stopped for a person to decide, and the delivery stood.</span>
+            <a href="DR6-SyncReconcile.dc.html" class="btn btn-line" style="align-self:flex-start;margin-top:4px;">See the driver's side<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

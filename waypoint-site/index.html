@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waypoint · Every stop, the same truth.</title>
+<meta name="description" content="Waypoint is a delivery planning system for the four people who move an order from a Colombo depot to a store shelf. Clickable prototypes for the dispatcher, loader, driver and store manager.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%23FACC15%27/%3E%3Cg transform=%27translate(6.4 6.4) scale(.8)%27 fill=%27none%27%3E%3Ccircle cx=%276%27 cy=%276%27 r=%272.7%27 stroke=%27%231B1A17%27 stroke-width=%272.4%27/%3E%3Ccircle cx=%2718%27 cy=%2718%27 r=%272.7%27 fill=%27%231B1A17%27/%3E%3Cpath d=%27M8.3 8.3L15.7 15.7%27 stroke=%27%231B1A17%27 stroke-width=%272.4%27 stroke-dasharray=%272.2 2.4%27/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@700;800&family=Big+Shoulders+Stencil:wght@800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Waypoint home"><span class="tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="2.7" stroke="#1B1A17" stroke-width="2"/><circle cx="18" cy="18" r="2.7" fill="#1B1A17"/><path d="M8.3 8.3L15.7 15.7" stroke="#1B1A17" stroke-width="2" stroke-dasharray="2.2 2.4"/></svg></span><span class="word">Waypoint</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#problem">The problem</a><a href="#how">How it works</a><a href="#prototypes">Prototypes</a><a href="#docs">Documents</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="wrap">
+      <div>
+        <span class="label">Rootcode Tech-Triathlon 2026 · Designathon · Team smoothOperator</span>
+        <h1 id="h-hero" class="display">Waypoint</h1>
+        <p class="tagline"><span class="hl">Every stop,</span> the same truth.</p>
+      </div>
+      <div>
+        <p class="lede">A delivery planning system for the four people who move an order from a Colombo depot to a store shelf, designed around the moments the run actually breaks.</p>
+        <div class="cta">
+          <a class="btn btn-yellow" href="#prototypes">Open a prototype <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+          <a class="btn btn-line" href="#problem">The three problems</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="facts" aria-label="The operation">
+        <div><b>120</b><span>outlets</span></div><div><b>60</b><span>vehicles</span></div><div><b>2</b><span>depots, Peliyagoda and Kandy</span></div><div><b>4</b><span>roles, each on their own device</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="problem" aria-labelledby="h-problem">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="sec-num">01</span><h2 id="h-problem">The three problems we designed around</h2></div>
+        <p>Today the run is held together by spreadsheets, printed run sheets and phone calls. The people who find out last are the ones who have to deal with it.</p></div>
+      <div class="problems">
+      <article class="problem"><span class="stencil" aria-hidden="true">01</span><h3>Planning is fragmented</h3><p>Orders, vehicle capacity, constraints, and store requirements live across spreadsheets, calls, and dispatcher knowledge.</p>
+        <div class="today"><span class="label">What it looks like today</span>Kavindi knows which outlets can't take a truck after eight and which mall shuts its dock at one. The spreadsheet doesn't. It also doesn't know VEH031 is in the workshop.</div></article>
+      <article class="problem"><span class="stencil" aria-hidden="true">02</span><h3>Decisions don't propagate</h3><p>When a load changes, the driver, store, loader, and dispatcher may not see the same operational state.</p>
+        <div class="today"><span class="label">What it looks like today</span>Dispatch changes the stop order at 04:10. Ruwan finds out when the driver argues with him at the truck, holding a printout that is already wrong.</div></article>
+      <article class="problem"><span class="stencil" aria-hidden="true">03</span><h3>Problems are discovered too late</h3><p>Shortages, connectivity failures, delivery issues, and deferrals often surface at the point of delivery instead of where they can still be managed.</p>
+        <div class="today"><span class="label">What it looks like today</span>Four cartons missing at the dock at 05:38 become an argument at the Kegalle store at 08:44, between two people who never had the goods.</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band dock-band on-dark" id="how" aria-labelledby="h-how">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="sec-num" style="color:var(--yellow)">02</span><h2 id="h-how">How it works</h2></div>
+        <p>One fact, every screen. A decision made on one role's screen can be read on the next role's screen, without a phone call.</p></div>
+      <div class="steps">
+      <article class="step"><span class="n" aria-hidden="true">01</span><h3>Plan</h3><span class="who">Dispatcher · before the 16:00 cutoff</span><p>Orders close at 16:00. Waypoint fits them into 60 vehicles by weight, slots and cold chain. When trucks run short, a written fairness rule suggests who waits, and the dispatcher makes the call.</p>
+        <div class="chips"><a class="chip" href="dispatcher.html#DP3-PlanAllocate">DP3</a><a class="chip" href="dispatcher.html#DP4-DeferralDecision">DP4</a></div></article>
+      <article class="step"><span class="n" aria-hidden="true">02</span><h3>Load</h3><span class="who">Loader · the dock from 04:30</span><p>Trucks are loaded last stop first from a plan that is never older than the last change. A missing carton is flagged at the dock with one tap, before the truck leaves.</p>
+        <div class="chips"><a class="chip" href="loader.html#LD2-LoadList">LD2</a><a class="chip" href="loader.html#LD4-FlagShortfall">LD4</a></div></article>
+      <article class="step"><span class="n" aria-hidden="true">03</span><h3>Deliver</h3><span class="who">Driver · on the road</span><p>One stop at a time. Proof of delivery is a signature, a photo and an item count on the phone, and it keeps working with no signal, sending by itself when the signal returns.</p>
+        <div class="chips"><a class="chip" href="driver.html#DR3-ProofOfDelivery">DR3</a><a class="chip" href="driver.html#DR5-OfflineMode">DR5</a></div></article>
+      <article class="step"><span class="n" aria-hidden="true">04</span><h3>Confirm</h3><span class="who">Store manager and dispatcher</span><p>The store checks what arrived against what it ordered. A real conflict is shown side by side and decided by a person, and every decision is kept in the log.</p>
+        <div class="chips"><a class="chip" href="store.html#SM6-ConfirmReceipt">SM6</a><a class="chip" href="driver.html#DR6-SyncReconcile">DR6</a><a class="chip" href="dispatcher.html#DP6-DeferredLog">DP6</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="prototypes" aria-labelledby="h-proto">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="sec-num">03</span><h2 id="h-proto">Open a prototype</h2></div>
+        <p>Each person gets their own clickable flow on the device they really use: a desktop for the dispatcher and the store, a dock tablet for the loader, a phone for the driver.</p></div>
+      <div class="people">
+      <article class="person" aria-labelledby="p-dispatcher">
+        <div class="top"><span class="avatar" aria-hidden="true">KP</span><div><h3 id="p-dispatcher">Kavindi Perera</h3><span class="role">Dispatcher</span></div></div>
+        <span class="device"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>Desktop<span class="sr-only">:</span> <span style="font-weight:400;color:var(--text-2)">Depot office, all day</span></span>
+        <blockquote><p>&ldquo;I know which outlets can't take a truck after eight and which mall shuts its dock at one. That lives in my head, not the spreadsheet.&rdquo;</p></blockquote>
+        <div class="foot"><a class="btn btn-ink" href="dispatcher.html">Open Kavindi's prototype <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="meta">6 screens · DP1 to DP6</span></div>
+      </article>
+      <article class="person" aria-labelledby="p-loader">
+        <div class="top"><span class="avatar" aria-hidden="true">RJ</span><div><h3 id="p-loader">Ruwan Jayasinghe</h3><span class="role">Loader</span></div></div>
+        <span class="device"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M19 12h.01"/></svg>Dock tablet<span class="sr-only">:</span> <span style="font-weight:400;color:var(--text-2)">Shared, at the dock, 04:00 to 07:00</span></span>
+        <blockquote><p>&ldquo;The list in my hand said five stops. Dispatch changed it twenty minutes ago and I find out when the driver argues with me at the truck.&rdquo;</p></blockquote>
+        <div class="foot"><a class="btn btn-ink" href="loader.html">Open Ruwan's prototype <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="meta">6 screens · LD1 to LD6</span></div>
+      </article>
+      <article class="person" aria-labelledby="p-driver">
+        <div class="top"><span class="avatar" aria-hidden="true">CW</span><div><h3 id="p-driver">Chamara Wickramasinghe</h3><span class="role">Driver</span></div></div>
+        <span class="device"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2"/><path d="M10.5 18.5h3"/></svg>Phone<span class="sr-only">:</span> <span style="font-weight:400;color:var(--text-2)">Their own, on the A1 to Kandy, 06:30 to 14:00</span></span>
+        <blockquote><p>&ldquo;Half the Kandy road has no signal. If the app needs a connection it doesn't work, and then it's my word against the shop's.&rdquo;</p></blockquote>
+        <div class="foot"><a class="btn btn-ink" href="driver.html">Open Chamara's prototype <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="meta">7 screens · DR1 to DR7</span></div>
+      </article>
+      <article class="person" aria-labelledby="p-store">
+        <div class="top"><span class="avatar" aria-hidden="true">NF</span><div><h3 id="p-store">Nadeeka Fernando</h3><span class="role">Store manager</span></div></div>
+        <span class="device"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>Desktop<span class="sr-only">:</span> <span style="font-weight:400;color:var(--text-2)">At the counter, OUT014 Dehiwala</span></span>
+        <blockquote><p>&ldquo;I order by message and hope. My staff come in at six to receive a delivery that might come at nine, or not at all.&rdquo;</p></blockquote>
+        <div class="foot"><a class="btn btn-ink" href="store.html">Open Nadeeka's prototype <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="meta">7 screens · SM1 to SM7</span></div>
+      </article>
+      </div>
+      <div id="docs">
+        <div class="sec-head" style="margin:56px 0 0"><div><span class="sec-num">04</span><h2 class="display" style="font-size:40px">Design documents</h2></div></div>
+        <div class="docs"><a class="doc-link" href="docs.html#Main"><b>Cover</b><span>The day story of one truck</span></a><a class="doc-link" href="docs.html#Problems"><b>The three problems</b><span>And the screens that answer them</span></a><a class="doc-link" href="docs.html#Personas"><b>Personas</b><span>Four people, four mornings</span></a><a class="doc-link" href="docs.html#Tradeoff"><b>Core tradeoff</b><span>One system, two working speeds</span></a><a class="doc-link" href="docs.html#StyleGuide"><b>Style guide</b><span>The Dock yard design system</span></a><a class="doc-link" href="docs.html#BrandGuide"><b>Brand guide</b><span>Identity, type, voice and use</span></a><a class="doc-link" href="assets/architecture.png"><b>System architecture</b><span>Serverless, offline first</span></a><a class="doc-link" href="assets/deployment-plan.png"><b>Deployment and rollout</b><span>One route, one depot, everything</span></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot on-dark">
+  <div class="wrap">
+    <div>
+      <span class="logo"><span class="tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="6" cy="6" r="2.7" stroke="#1B1A17" stroke-width="2"/><circle cx="18" cy="18" r="2.7" fill="#1B1A17"/><path d="M8.3 8.3L15.7 15.7" stroke="#1B1A17" stroke-width="2" stroke-dasharray="2.2 2.4"/></svg></span><span class="word">Waypoint</span></span>
+      <p class="small">Team smoothOperator · Rootcode Tech-Triathlon 2026 · Designathon</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="docs.html#AIDisclosure">AI use disclosure</a>
+      <a href="docs.html#BrandGuide">Brand guide</a>
+      <a href="docs.html#Personas">Personas</a>
+      <a href="docs.html#Problems">The three problems</a>
+      <a href="assets/architecture.png">Architecture</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

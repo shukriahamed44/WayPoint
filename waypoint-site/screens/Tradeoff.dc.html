@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Core tradeoff</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="../assets/waypoint-ds.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Big+Shoulders+Stencil+Display:wght@800;900&display=swap">
+<style>
+  body{margin:0;}
+
+</style>
+</helmet>
+<div class="w" style="width:1000px;height:760px;background:var(--paper);padding:34px 40px;display:flex;flex-direction:column;gap:20px;overflow:hidden;">
+  <div class="col g6"><span class="label">Deliverable · the core tradeoff</span><h1 class="h-display" style="font-size:48px;">One system, two working speeds</h1></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);">
+    <section class="col g10" style="padding:18px 22px 18px 0;border-right:1px solid var(--line-2);">
+      <span class="label">Dispatcher · Store manager</span><span class="h-display" style="font-size:30px;">Explain</span>
+      <svg viewBox="0 0 300 70" width="100%" height="70" aria-hidden="true"><rect x="0" y="0" width="300" height="8" rx="1" fill="#E9E6DE"/><rect x="0" y="0" width="40" height="8" rx="1" fill="#C9C4B8"/><rect x="0" y="11" width="300" height="8" rx="1" fill="#E9E6DE"/><rect x="0" y="11" width="49" height="8" rx="1" fill="#C9C4B8"/><rect x="0" y="22" width="300" height="8" rx="1" fill="#FBEFB7"/><rect x="0" y="22" width="58" height="8" rx="1" fill="#C9C4B8"/><rect x="0" y="33" width="300" height="8" rx="1" fill="#E9E6DE"/><rect x="0" y="33" width="67" height="8" rx="1" fill="#C9C4B8"/><rect x="0" y="44" width="300" height="8" rx="1" fill="#E9E6DE"/><rect x="0" y="44" width="76" height="8" rx="1" fill="#C9C4B8"/><rect x="0" y="55" width="300" height="8" rx="1" fill="#E9E6DE"/><rect x="0" y="55" width="85" height="8" rx="1" fill="#C9C4B8"/></svg>
+      <p style="margin:0;font-size:13.5px;line-height:1.55;color:var(--ink-2);">Planning 200+ orders against 60 vehicles before a 16:00 cutoff. Dense tables, filters and ranked lists on a big screen, and every deferral carries a written reason, because someone will ask why.</p>
+    </section>
+    <section class="col g10" style="padding:18px 0 18px 22px;">
+      <span class="label">Loader · Driver</span><span class="h-display" style="font-size:30px;">Execute</span>
+      <svg viewBox="0 0 300 70" width="100%" height="70" aria-hidden="true"><rect x="0" y="0" width="300" height="30" rx="6" fill="#1B1A17"/><rect x="0" y="38" width="300" height="30" rx="6" fill="#FACC15"/></svg>
+      <p style="margin:0;font-size:13.5px;line-height:1.55;color:var(--ink-2);">Seconds per carton at the dock, one hand and full sun on the road, no signal in the hills. One action per screen, large targets, and everything works offline and catches up later.</p>
+    </section>
+  </div>
+  <section class="col g12" style="padding:18px 20px;background:var(--card);border:1px solid var(--line);border-radius:10px;">
+    <span class="h-sec">The one rule that holds everywhere</span>
+    <p style="margin:0;font-size:14px;line-height:1.55;">A decision made on one role's screen is readable on the next role's screen without a phone call. Same fact, same number, same words.</p>
+    <div class="row g8" style="margin-top:4px;">
+      <div class="col g4 fill" style="padding:10px 12px;border:1px solid var(--line-2);border-radius:6px;"><span class="mono xs t2">05:38 · LD4</span><span class="sm b">Loader flags 6 of 10</span><span class="xs t2">at the dock</span></div><span style="align-self:center;color:var(--text-3);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="col g4 fill" style="padding:10px 12px;border:1px solid var(--line-2);border-radius:6px;"><span class="mono xs t2">05:40 · outlet</span><span class="sm b">Kegalle is told</span><span class="xs t2">before the truck leaves</span></div><span style="align-self:center;color:var(--text-3);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="col g4 fill" style="padding:10px 12px;border:1px solid var(--line-2);border-radius:6px;"><span class="mono xs t2">08:44 · DR3</span><span class="sm b">Driver sees it on the POD</span><span class="xs t2">no argument at the door</span></div><span style="align-self:center;color:var(--text-3);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div class="col g4 fill" style="padding:10px 12px;border:1px solid var(--line-2);border-radius:6px;"><span class="mono xs t2">10:14 · DP1</span><span class="sm b">Dispatch sees it handled</span><span class="xs t2">no call needed</span></div>
+    </div>
+  </section>
+  <p class="sm t2" style="margin:0;line-height:1.55;">So the four roles share a visual language (type, colour meanings, the route line) but not a layout. The desktop roles get density because they explain decisions after the fact. The field roles get simplicity because they act under time and physical pressure.</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1000,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
